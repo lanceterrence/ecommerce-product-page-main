@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c8bd0ed-eff7-41aa-aa53-b8cdd09ef823" name="Changes" comment="refactor: change project name on package.json" />
+    <list default="true" id="7c8bd0ed-eff7-41aa-aa53-b8cdd09ef823" name="Changes" comment="refactor: change project name on package.json">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +61,7 @@
       <workItem from="1640757829751" duration="68000" />
       <workItem from="1640757998123" duration="1981000" />
       <workItem from="1640846544735" duration="726000" />
+      <workItem from="1641170661075" duration="109000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: change project name on package.json">
       <created>1640847106554</created>
