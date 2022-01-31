@@ -1,11 +1,18 @@
 import React from "react"
 import IconCart from "../../assets/icon-cart.svg"
+import styled from "@emotion/styled"
+import { Box } from "@chakra-ui/react"
+
+export const ImageIcon = styled.img`
+    width: 20px;
+    height: 20px;
+`
 
 const CartIcon: React.FC = () => {
     return (
-        <>
-            <img src={IconCart} alt="" />
-        </>
+        <Box>
+            <ImageIcon src={IconCart} alt=""/>
+        </Box>
     )
 }
 

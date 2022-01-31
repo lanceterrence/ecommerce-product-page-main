@@ -15,14 +15,21 @@ const breakpoints = createBreakpoints({
 
 const theme = extendTheme({
   breakpoints,
+  fonts: {
+    body: "Kumbh Sans"
+  },
   colors: {
-    primaryBrand: {
-      100: "hsl(26, 100%, 55%)",
-      200: "hsl(25, 100%, 94%)"
+    customPrimary: {
+      orange: "hsl(26, 100%, 55%)",
+      paleOrange: "hsl(25, 100%, 94%)"
     },
-    secondaryBrand: {
+    customSecondary: {
       varkBlue: "hsl(220, 13%, 13%)",
-    
+      darkGrayishBlue: "hsl(219, 9%, 45%)",
+      grayishBlue: "hsl(220, 14%, 75%)",
+      lightGrayishBlue: "hsl(223, 64%, 98%)",
+      white: "hsl(0, 0%, 100%)",
+      black: "hsl(0, 0%, 0%)"
     }
   }
 })

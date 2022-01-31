@@ -1,7 +1,15 @@
 import React from "react";
-import { Box, HStack, Wrap, WrapItem } from "@chakra-ui/react"
+import { Box, HStack, Wrap, WrapItem, theme, Button } from "@chakra-ui/react"
 import { ReactComponent as SneakerLogo } from "../../assets/logo.svg"
 import HeaderSubAction from "../HeaderSubAction";
+import styled from "@emotion/styled";
+
+const ButtonStyled = styled(Button)`
+    font-weight: 400;
+    &:hover {
+        outline: 2px solid black;   
+    }
+`
 
 const menu: Record<string, {
     label: string,
@@ -33,21 +41,23 @@ const menu: Record<string, {
 
 const Header: React.FC = () => {
     return (
-        <HStack justifyContent="space-between" alignItems="center" minH={"120px"}>
-            <Box>
+        <HStack justifyContent="space-between" alignItems="center" h={{lg: "120px", sm: "45px"}} borderBottom={"1px solid"} borderColor={"gray.200"} margin={0}>
+            <Box m="0 35px 0 0">
                 <SneakerLogo />
             </Box>
-            <Box>
+            <Box display="flex" flexGrow={1} h={100}>
                 <Wrap>
-                {
-                    Object.values(menu).map((menuItems, index) => {
-                        return (
-                            <WrapItem key={index}>
-                                {menuItems.label}
-                            </WrapItem>
-                        )
-                    })
-                }
+                    {
+                        Object.values(menu).map((menuItem, index) => {
+                            return (
+                                <WrapItem>
+                                    <ButtonStyled h={100} variant="unstyled" p={0} mr="25px">
+                                        {menuItem.label}
+                                    </ButtonStyled>
+                                </WrapItem>
+                            )
+                        })
+                    }
                 </Wrap>
             </Box>
             <HeaderSubAction /> 
