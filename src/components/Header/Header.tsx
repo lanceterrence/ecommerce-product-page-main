@@ -6,8 +6,17 @@ import styled from "@emotion/styled";
 
 const ButtonStyled = styled(Button)`
     font-weight: 400;
+    height: 120px;
+    border-radius: 0;
+    margin: 0 25px 0 0;
+    border-bottom: 4px solid transparent;
     &:hover {
-        outline: 2px solid black;   
+        border-bottom: 4px solid hsl(26, 100%, 55%);
+        margin: 0 25px 0 0;
+    }
+
+    & div {
+       transform: translateY(4px);
     }
 `
 
@@ -41,20 +50,26 @@ const menu: Record<string, {
 
 const Header: React.FC = () => {
     return (
-        <HStack justifyContent="space-between" alignItems="center" h={{lg: "120px", sm: "45px"}} borderBottom={"1px solid"} borderColor={"gray.200"} margin={0}>
+        <HStack justifyContent="space-between" alignItems="center" h={{lg: "120px", sm: "45px"}} borderBottom={"1px solid"} borderColor={"gray.200"}>
             <Box m="0 35px 0 0">
                 <SneakerLogo />
             </Box>
-            <Box display="flex" flexGrow={1} h={100}>
-                <Wrap>
+            <Box display="flex" flexGrow={1} h={"100%"}>
+                <Wrap height="100%">
                     {
                         Object.values(menu).map((menuItem, index) => {
                             return (
-                                <WrapItem>
-                                    <ButtonStyled h={100} variant="unstyled" p={0} mr="25px">
-                                        {menuItem.label}
-                                    </ButtonStyled>
-                                </WrapItem>
+                                    <Box>
+                                        <ButtonStyled variant="unstyled" padding={0} sx={{
+                                            outline: "none",
+                                            color: "customSecondary.darkGrayishBlue",
+                                            ":hover": {
+                                                color: "customSecondary.black"
+                                            }
+                                        }}>
+                                            <div>{menuItem.label}</div>
+                                        </ButtonStyled>
+                                    </Box>
                             )
                         })
                     }

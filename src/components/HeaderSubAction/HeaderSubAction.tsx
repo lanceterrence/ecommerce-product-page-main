@@ -1,15 +1,16 @@
 import React from "react"
-import { Box } from "@chakra-ui/react"
+import { Box, Image } from "@chakra-ui/react"
 import Cart from "../Cart/"
 import AccountAvatar from "../../assets/image-avatar.png"
 import styled from "@emotion/styled"
 
-const AccountIcon = styled.img`
+const AccountIcon = styled(Image)`
     border-radius: 50%;
     width: 50px;
     height: 50px;
     &:hover {
         outline: 3px solid hsl(26, 100%, 55%);
+        cursor: pointer;
     }
 `
 const BoxCustomed = styled(Box)`
