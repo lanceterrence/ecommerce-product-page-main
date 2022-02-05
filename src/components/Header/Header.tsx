@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, HStack, Wrap, WrapItem, theme, Button } from "@chakra-ui/react"
+import { Box, HStack, Wrap, Button } from "@chakra-ui/react"
 import { ReactComponent as SneakerLogo } from "../../assets/logo.svg"
 import HeaderSubAction from "../HeaderSubAction";
 import styled from "@emotion/styled";
@@ -60,9 +60,7 @@ const Header: React.FC = () => {
                         Object.values(menu).map((menuItem, index) => {
                             return (
                                     <Box>
-                                        <ButtonStyled variant="unstyled" padding={0} sx={{
-                                            outline: "none",
-                                            color: "customSecondary.darkGrayishBlue",
+                                        <ButtonStyled variant="unstyled" padding={0} color="customSecondary.darkGrayishBlue" sx={{
                                             ":hover": {
                                                 color: "customSecondary.black"
                                             }
