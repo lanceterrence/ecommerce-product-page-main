@@ -4,6 +4,15 @@ import './index.css';
 import App from './App';
 import { ChakraProvider, extendTheme } from "@chakra-ui/react"
 import { createBreakpoints } from "@chakra-ui/theme-tools"
+import { Global, css } from "@emotion/react"
+import "focus-visible/dist/focus-visible"
+
+const GlobalStyle = css`
+  .js-focus-visible :focus:not([data-focus-visible-added]) {
+    outline: none;
+    box-shadow: none;
+}
+`
 
 const breakpoints = createBreakpoints({
   sm: "375px",
@@ -36,6 +45,7 @@ const theme = extendTheme({
 
 ReactDOM.render(
   <ChakraProvider theme={theme}>
+    <Global styles={GlobalStyle} />
     <App />
   </ChakraProvider>,
   document.getElementById('root')

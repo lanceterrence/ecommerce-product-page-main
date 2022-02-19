@@ -1,11 +1,8 @@
 import React from "react"
 import { Box, HStack } from "@chakra-ui/react"
 
-type SingleProductProps =  {
 
-}
-
-const SingleProduct: React.FC<SingleProductProps> = ({}) => {
+const SingleProduct: React.FC = () => {
 
     return (
         <HStack>

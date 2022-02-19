@@ -59,12 +59,13 @@ const Header: React.FC = () => {
                     {
                         Object.values(menu).map((menuItem, index) => {
                             return (
-                                    <Box>
-                                        <ButtonStyled variant="unstyled" padding={0} color="customSecondary.darkGrayishBlue" sx={{
+                                    <Box key={index}>
+                                        <ButtonStyled  variant="unstyled" padding={0} color="customSecondary.darkGrayishBlue" sx={{
                                             ":hover": {
                                                 color: "customSecondary.black"
                                             }
-                                        }}>
+                                        }}
+                                    >
                                             <div>{menuItem.label}</div>
                                         </ButtonStyled>
                                     </Box>
