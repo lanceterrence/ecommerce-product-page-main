@@ -1,9 +1,13 @@
 import React from "react"
 import { Box, HStack } from "@chakra-ui/react"
 import ImagesContainer from "../components/ImagesContainer"
+import PriceComponent from "../components/PriceComponent"
+import ActionsComponent from "../components/ActionsComponent"
+
 
 
 const SingleProduct: React.FC = () => {
+    const [_quantity, _setQuantity] = React.useState<number>(0)
 
     return (
         <HStack>
@@ -52,6 +56,8 @@ const SingleProduct: React.FC = () => {
                     >
                         These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
                     </Box>
+                    <PriceComponent currentPrice={125} discountPercentage={50} discountedPrice={250} />
+                    <ActionsComponent quantity={_quantity} setQuantity={_setQuantity} />
                 </Box>
             </Box>
         </HStack>
