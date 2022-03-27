@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Box, Image, Button } from "@chakra-ui/react"
+import { Box, Image, Button, Modal, ModalOverlay, ModalContent, ModalCloseButton } from "@chakra-ui/react"
 import ImageProduct1 from "../assets/image-product-1.jpg"
 import ImageProduct1Thumbnail from "../assets/image-product-1-thumbnail.jpg"
 import ImageProduct2 from "../assets/image-product-2.jpg"
@@ -33,39 +33,52 @@ const images: Array<Record<string, any>> = [
     },
 ]
 
+
 const ImagesContainer: React.FC = () => {
     const [selectedImage, setSelectedImage] = React.useState<any>(ImageProduct1)
     const [selectedIndex, setSelectedIndex] = React.useState<number>(0)
+    const [isLargeImageViewerOpen, setLargeImageViewerOpen] = React.useState<boolean>(false)
 
     return (
-        <Box
-            maxWidth={"80%"}
-        >
-             <LargeViewer>
-                <Button
-                    variant="unstyled"
-                    height="auto"
-                >
-                    <Image
-                        boxSize="auto"
-                        src={selectedImage}
-                        alt="imageproduct1"
-                        borderRadius="15px"
-                        draggable="false"
-                    />
-                </Button>
-            </LargeViewer>
+        <>
+            <Modal isOpen={isLargeImageViewerOpen} onClose={() => setLargeImageViewerOpen(false)} isCentered>
+                <ModalOverlay style={{backgroundColor: "rgba(0,0,0,0.7)"}} />
+                <ModalContent>
+                    <Box padding="15px">
+                        <span>hello</span>
+                    </Box>
+                </ModalContent>
+            </Modal>
             <Box
-                width="auto"
-                margin="35px 0 0 0"
-                display="grid"
-                gridTemplateColumns="repeat(auto-fit, minmax(15%, 1fr))"
-                gridColumnGap={"40px"}
+              maxWidth={"80%"}
             >
-                {
-                    images.map((image, index) => {
-                        return (
-                            <Button
+                <LargeViewer>
+                    <Button
+                      variant="unstyled"
+                      height="auto"
+
+                      onClick={() => setLargeImageViewerOpen(true)}
+                    >
+                        <Image
+                          boxSize="auto"
+                          src={selectedImage}
+                          alt="imageproduct1"
+                          borderRadius="15px"
+                          draggable="false"
+                        />
+                    </Button>
+                </LargeViewer>
+                <Box
+                  width="auto"
+                  margin="35px 0 0 0"
+                  display="grid"
+                  gridTemplateColumns="repeat(auto-fit, minmax(15%, 1fr))"
+                  gridColumnGap={"40px"}
+                >
+                    {
+                        images.map((image, index) => {
+                            return (
+                              <Button
                                 variant="unstyled"
                                 onClick={() => {
                                     setSelectedImage(image.fullImage)
@@ -76,21 +89,22 @@ const ImagesContainer: React.FC = () => {
                                 borderRadius="18px"
                                 border={selectedIndex === index ? "3px solid" : "none"}
                                 borderColor={selectedIndex === index ? "customPrimary.orange" : "transparent"}
-                            >
-                                <Image
+                              >
+                                  <Image
                                     boxSize="auto"
                                     src={image.thumbnail}
                                     alt={image.alt}
                                     borderRadius="15px"
                                     opacity={selectedIndex === index ? "0.3" : "1"}
                                     draggable="false"
-                                />
-                            </Button>
-                        )
-                    })
-                }
+                                  />
+                              </Button>
+                            )
+                        })
+                    }
+                </Box>
             </Box>
-        </Box>
+        </>
     )
 }
 

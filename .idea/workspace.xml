@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c8bd0ed-eff7-41aa-aa53-b8cdd09ef823" name="Changes" comment="refactor: remove unused import" />
+    <list default="true" id="7c8bd0ed-eff7-41aa-aa53-b8cdd09ef823" name="Changes" comment="refactor: remove unused import">
+      <change afterPath="$PROJECT_DIR$/src/assets/IconCart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ActionsComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActionsComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ImagesContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImagesContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SingleProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SingleProduct.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +23,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/App.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/index.tsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/package-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -61,6 +67,7 @@
       <workItem from="1640846544735" duration="726000" />
       <workItem from="1641170661075" duration="109000" />
       <workItem from="1646291515409" duration="365000" />
+      <workItem from="1648368548090" duration="4477000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: change project name on package.json">
       <created>1640847106554</created>

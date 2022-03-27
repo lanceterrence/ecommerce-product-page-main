@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Button, ButtonGroup, Image } from "@chakra-ui/react"
-import IconCart from "../assets/icon-cart.svg"
+import IconCart from "../assets/IconCart"
 import IconMinus from "../assets/icon-minus.svg"
 import IconPlus from "../assets/icon-plus.svg"
 
@@ -19,12 +19,13 @@ const ActionsComponent: React.FC<ActionsComponentProps> = (
       <Box
         display="flex"
         flexDirection="row"
+        minHeight="55px"
       >
-          <ButtonGroup isAttached marginRight="20px">
+          <ButtonGroup isAttached marginRight="20px" display="flex">
               <Button height="100%" onClick={() => setQuantity(quantity - 1)} disabled={!quantity}>
                   <Image src={IconMinus} alt="icon-minus" />
               </Button>
-              <Button height="100%">{quantity}</Button>
+              <Button height="100%" flex="2" minWidth="100px">{quantity}</Button>
               <Button height="100%" onClick={() => setQuantity(quantity + 1)}>
                   <Image src={IconPlus} alt="icon-plus" />
               </Button>
@@ -38,8 +39,9 @@ const ActionsComponent: React.FC<ActionsComponentProps> = (
             _hover={{
                 bgColor: "customPrimary.paleOrange"
             }}
+            height="auto"
           >
-              <Image src={IconCart} alt="icon-cart" marginRight="10px" /> Add to cart
+              <Box marginRight="20px" transform="scale(0.8) translateY(-1px)"><IconCart customColor={"white"} /></Box> Add to cart
           </Button>
       </Box>
     )
